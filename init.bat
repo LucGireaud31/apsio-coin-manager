@@ -1,0 +1,1 @@
+code . && git pull && pnpm i && pnpm dev

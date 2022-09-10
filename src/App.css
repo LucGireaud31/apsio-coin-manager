@@ -1,0 +1,25 @@
+button:focus {
+  box-shadow: none !important;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+}
+
+.no-scroll {
+  overflow: hidden;
+}

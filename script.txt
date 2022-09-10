@@ -1,0 +1,25 @@
+{-# STDLIB_VERSION 5 #-}
+{-# SCRIPT_TYPE ACCOUNT #-}
+{-# CONTENT_TYPE DAPP #-}
+
+
+@Callable(i)
+func createOrModifyClass (nom:String ,eleves:String) = {
+
+  [
+    StringEntry(nom+"_"+i.caller.toString(), eleves)
+  ]
+
+}
+
+@Callable(i)
+func deleteClass (nom:String) = {
+
+  [
+    DeleteEntry(nom+"_"+i.caller.toString())
+  ]
+
+}
+
+@Verifier(tx)
+func verify () = true
