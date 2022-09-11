@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp -r dist/index.html /var/www/apsiocoin && cp -r dist/assets /var/www && cp -r dist/images /var/www ",
+    "prebuild": "[[ $CI = true ]] && npx pnpm@3 install -r --store=node_modules/.pnpm-store || echo skiping pnpm install"
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
