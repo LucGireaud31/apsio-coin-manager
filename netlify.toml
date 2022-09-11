@@ -1,2 +1,9 @@
+
+# example netlify.toml
+[build]
+  command = "npx pnpm install -r --store=node_modules/.pnpm-store && npx pnpm build"
+  functions = "netlify/functions"
+  publish = "dist"
+
 [build.environment]
-    NPM_FLAGS="--prefix=/dev/null"
+  NPM_FLAGS = "--version"
